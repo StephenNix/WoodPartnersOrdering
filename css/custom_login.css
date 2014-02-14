@@ -1,0 +1,47 @@
+html {
+	background-color: #C8C8C8;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+div {
+	margin-top: 7em;
+	margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    min-width: 200px;
+}
+
+img {
+    position: relative;
+    top: 25px;
+    width: 100%;
+}
+
+input {
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+#fields {
+	margin-top: 5em;
+}
+
+#usernameField, #passwordField {
+	height: 28px;
+	width: 90%;
+	margin-bottom: 0.4em;
+}
+
+#loginButton {
+	height: 35px;
+    width: 40%;
+}

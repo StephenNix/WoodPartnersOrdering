@@ -1,0 +1,84 @@
+html {
+	background-color: #C8C8C8;
+	font-family: 'Open Sans', sans-serif;
+	min-height: 100%;
+	position: relative;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#wrapper {
+	max-width: 1366px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #BCBCBC;
+	position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+}
+
+#logo {
+	min-width: 325px;
+    width: 20%;
+}
+
+#logo img {
+	width: 25%;
+	margin-top: 0.7em;
+	margin-bottom: 0.7em;
+	margin-left: 0.7em;
+}
+
+#orderOptions {
+	min-width: 400px;
+    width: 30%;
+    margin-left: 0.7em;
+}
+
+#orderOptions > input[type="button"] {
+	height: 100px;
+    margin-bottom: 0.7em;
+    width: 75%;
+    display: block;
+}
+
+#orderNumber_status, #orderNumber_revise, #orderNumber_cancel {
+	display: none;
+	margin-bottom: 0.7em;
+	width: 75.5%;
+}
+
+#orderNumber_status > input[type="number"], 
+#orderNumber_revise > input[type="number"], 
+#orderNumber_cancel > input[type="number"] {
+	width: 60%;
+}
+
+#orderNumber_status > input[type="button"], 
+#orderNumber_revise > input[type="button"], 
+#orderNumber_cancel > input[type="button"] {
+	width: 36%;
+	text-align: center;
+}
+
+#orderPanel {
+	border: 3px dotted #FFFFFF;
+    float: right;
+    margin-right: 0.7em;
+    min-width: 700px;
+    width: 70%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0;
+}
