@@ -1,0 +1,14 @@
+html {
+	background-color: #C8C8C8;
+	font-family: 'Open Sans', sans-serif;
+	min-height: 100%;
+	position: relative;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
