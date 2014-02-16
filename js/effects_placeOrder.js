@@ -27,7 +27,7 @@ var properties = [
 var selectedProperty;
 
 $(document).ready((function () {
-    $('.chosen-select').chosen({ width: '20%' });
+    $('.chosen-select').chosen({ width: '21%' });
     
     $('#propertyTypeSelect').ddslick({
         data: properties,

@@ -21,7 +21,7 @@ h1 {
     text-align: center;
 }
 
-#shippingInfo input {
+#shippingInfo [type=text]{
     display: block;
     min-width: 180px;
     width: 50%;
@@ -31,10 +31,20 @@ h1 {
     
 }
 
+[type=button] {
+    display: inline-block;
+    min-width: 180px;
+    width: 25.3%;
+    height: 55px;
+    margin-bottom: 0.4em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #shippingInfo {
     display: none;
     margin: 0 auto;
-    max-width: 50%;
+    max-width: 800px;
     text-align: center;
 }
 
@@ -47,5 +57,5 @@ h1 {
 
 #address_zip {
     display: inline-block !important;
-    width: 30% !important;
+    width: 27% !important;
 }
