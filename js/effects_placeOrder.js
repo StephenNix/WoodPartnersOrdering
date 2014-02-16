@@ -12,7 +12,7 @@ var properties = [
         value: "new",
         selected: false,
         description: "Order for a new property",
-        imageSrc: "img/logo.png"
+        imageSrc: "img/Home_Icon.png"
     },
     
     {
@@ -20,13 +20,15 @@ var properties = [
         value: "overhead",
         selected: false,
         description: "Order attributed to overhead",
-        imageSrc: "img/logo.png"
+        imageSrc: "img/g394.png"
     }
 ];
 
 var selectedProperty;
 
 $(document).ready((function () {
+    $('.chosen-select').chosen({ width: '20%' });
+    
     $('#propertyTypeSelect').ddslick({
         data: properties,
         width: 300,

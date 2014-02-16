@@ -12,23 +12,28 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/custom_placeOrder.css">
+        <link rel="stylesheet" href="js/chosen_v1.1.0/chosen.css">
         <script src="js/vendor/modernizr-2.7.1.min.js"></script>
         <script src="js/vendor/jquery-1.10.2.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         <script src="js/effects_placeOrder.js"></script>
         <script src="js/jquery.ddslick.min.js"></script>
+        <script src="js/chosen_v1.1.0/chosen.jquery.js"></script>
+        
     </head>
     <body>
         <div id="propertyTypeSelect"></div>
-        <div id="selected"></div>
+        
         <div id="shippingInfo">
             <h1>Enter Shipping Information</h1>
-            <input type="text" id="propertyName" placeholder="Property Name"/><br>
-            <input type="text" id="endUserName" placeholder="End User Full Name"/><br>
+            <input type="text" id="propertyName" placeholder="Property Name"/>
+            <input type="text" id="endUserFirstName" placeholder="Contact First Name"/>
+            <input type="text" id="endUserLastName" placeholder="Contact Last Name"/>
+            <input type="text" id="endUserTitle" placeholder="Contact Title"/>
             <input type="text" id="address_street" placeholder="Street Address"/>
             <input type="text" id="address_city" placeholder="City"/>
-            <select id="address_state">
+            <select id="address_state" class="chosen-select">
                 <option value="" selected style="display: none">Select a State</option>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
@@ -82,7 +87,7 @@
                 <option value="WI">Wisconsin</option>
                 <option value="WY">Wyoming</option>
             </select>
-            
+            <input type="number" id="address_zip" placeholder="Zip Code"/>  
         </div>
     </body>
 </html>
