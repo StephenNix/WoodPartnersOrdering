@@ -24,6 +24,8 @@ var properties = [
     }
 ];
 
+var selectedProperty;
+
 $(document).ready((function () {
     $('#propertyTypeSelect').ddslick({
         data: properties,
@@ -31,7 +33,11 @@ $(document).ready((function () {
         selectText: "Select a property type",
         imagePosition: "right",
         onSelected: function(data){
-            $('#selected').text($('#propertyTypeSelect').data('ddslick').selectedData.value);
+            selectedProperty = $('#propertyTypeSelect').data('ddslick').selectedData.value;
+            $('#selected').text(selectedProperty);
+            if($('#shippingInfo').css('display') === 'none'){
+                $('#shippingInfo').fadeIn(200);
+            }
         }
     });
     

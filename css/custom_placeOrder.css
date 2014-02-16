@@ -1,14 +1,33 @@
 html {
-	background-color: #C8C8C8;
-	font-family: 'Open Sans', sans-serif;
-	min-height: 100%;
-	position: relative;
+    background-color: #C8C8C8;
+    font-family: 'Open Sans', sans-serif;
+    min-height: 100%;
+    position: relative;
 }
 
 body {
-	padding: 0;
-	margin: 0;
-	width: 100%;
-	height: 100%;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
 }
 
+#propertyTypeSelect {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#shippingInfo {
+    display: none;
+}
+
+#shippingInfo input {
+    height: 28px;
+    width: 40%;
+    margin-bottom: 0.4em;
+}
+
+#address_state {
+    height: 28px;
+    width: 10%;
+}
