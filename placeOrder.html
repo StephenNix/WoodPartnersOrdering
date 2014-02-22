@@ -27,7 +27,7 @@
         
         <div id="shippingInfo">
             <h1>Enter Shipping Information</h1>
-            <input type="text" id="propertyName" placeholder="Property Name"/>
+            <input type="text" id="propertyName" placeholder="Property Name" maxlength="40"/>
             <input type="text" id="endUserFirstName" placeholder="Contact First Name"/>
             <input type="text" id="endUserLastName" placeholder="Contact Last Name"/>
             <input type="text" id="endUserTitle" placeholder="Contact Title/Position"/>
@@ -92,7 +92,9 @@
             <input type="number" id="address_zip" placeholder="Zip Code"/><br>
             <input type="button" id="residentialAddress" value="Residential"/>
             <input type="button" id="businessAddress" value="Business"/>
-            
+            <label for="POnumber">P.O. Number</label>
+            <input type="text" id="POnumber" readonly />
+            <input type="button" id="nextButton" value="Next"/> 
         </div>
     </body>
 </html>

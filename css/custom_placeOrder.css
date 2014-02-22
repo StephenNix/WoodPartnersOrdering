@@ -59,3 +59,7 @@ h1 {
     display: inline-block !important;
     width: 27% !important;
 }
+
+label {
+    display: block;
+}

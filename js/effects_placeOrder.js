@@ -1,7 +1,7 @@
 var properties = [
     {
         text: "Existing Property",
-        value: "existing",
+        value: "EP",
         selected: false,
         description: "Order for an existing property",
         imageSrc: "img/logo.png"
@@ -9,7 +9,7 @@ var properties = [
     
     {
         text: "New Property",
-        value: "new",
+        value: "SUP",
         selected: false,
         description: "Order for a new property",
         imageSrc: "img/Home_Icon.png"
@@ -17,7 +17,7 @@ var properties = [
     
     {
         text: "Overhead",
-        value: "overhead",
+        value: "OH",
         selected: false,
         description: "Order attributed to overhead",
         imageSrc: "img/g394.png"
@@ -25,6 +25,9 @@ var properties = [
 ];
 
 var selectedProperty;
+var propertyName = "property";
+var d = new Date();
+var currentDate = d.getFullYear() + '-' + d.getUTCMonth() + '-' + d.getDate();
 
 $(document).ready((function () {
     $('.chosen-select').chosen({ width: '21%' });
@@ -36,11 +39,25 @@ $(document).ready((function () {
         imagePosition: "right",
         onSelected: function(data){
             selectedProperty = $('#propertyTypeSelect').data('ddslick').selectedData.value;
-            $('#selected').text(selectedProperty);
-            if($('#shippingInfo').css('display') === 'none'){
-                $('#shippingInfo').fadeIn(200);
-            }
+            $('#shippingInfo').fadeIn(200);
+            $('#POnumber').val(selectedProperty + '_' + propertyName + '_' + currentDate);
+            $('#POnumber').val($('#POnumber').val().split(" ").join(""));
         }
     });
     
+    $('#residentialAddress').click(function () {
+        $('#residentialAddress').attr('disabled', 'disabled');
+        $('#businessAddress').removeAttr('disabled');
+    });
+    
+    $('#businessAddress').click(function () {
+        $('#businessAddress').attr('disabled', 'disabled');
+        $('#residentialAddress').removeAttr('disabled');
+    });
+    
+    $('#propertyName').bind('input propertychange', function() {
+        propertyName = $('#propertyName').val();
+        $('#POnumber').val(selectedProperty + '_' + propertyName + '_' + currentDate);
+        $('#POnumber').val($('#POnumber').val().split(" ").join(""));
+    });
 }));
