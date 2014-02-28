@@ -8,9 +8,23 @@ function isNumberKey(evt) {
 }
 
 $(document).ready(function() {
-    $('#placeOrder').click(function() {
-        window.location = 'placeOrder.html';
+    
+    $('a.fancybox').fancybox({
+        transitionIn    :   'elastic',
+        transitionOut   :   'elastic',
+        speedIn :   600, 
+        speedOut:   200, 
+        hideOnContentClick  :   false,
+        width   :   700,
+        height  :    720,
+        fitToView   :   false,
+        autoSize    :   false
     });
+    
+    $('#placeOrder').click(function() {
+        $('#placeOrder_link').click();
+    });
+    
     $('#orderStatus').click(function() {
         $('#orderNumber_status input[type="number"]').val('');
         $('#orderNumber_status').stop(true, true).slideToggle(200);
