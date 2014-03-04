@@ -29,7 +29,14 @@ var propertyName = "property";
 var d = new Date();
 var currentDate = d.getFullYear() + '-' + d.getUTCMonth() + '-' + d.getDate();
 
+
 $(document).ready((function () {
+    $('body').mousedown(function(e){if(e.button===1)return false;});
+    function scrollToAnchor(aid) {
+        var aTag = $("a[name='" + aid + "']");
+        $('html,body').animate({scrollTop: aTag.offset().top}, 'slow');
+    }
+    
     $('.chosen-select').chosen({ width: '21%' });
     
     $('#propertyTypeSelect').ddslick({
@@ -39,10 +46,17 @@ $(document).ready((function () {
         imagePosition: "right",
         onSelected: function(data){
             selectedProperty = $('#propertyTypeSelect').data('ddslick').selectedData.value;
-            $('#shippingInfo').fadeIn(200);
             $('#POnumber').val(selectedProperty + '_' + propertyName + '_' + currentDate);
             $('#POnumber').val($('#POnumber').val().split(" ").join(""));
         }
+    });
+    
+    $('#nextButton').click(function () {
+        scrollToAnchor('shippingInfo2_a'); 
+    });
+    
+    $('#nextButton2').click(function () {
+        scrollToAnchor('shippingInfo3_a'); 
     });
     
     $('#residentialAddress').click(function () {

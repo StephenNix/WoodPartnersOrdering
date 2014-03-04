@@ -47,7 +47,7 @@
                 <input type="button" value="Revise Order" id="reviseOrder"/>
                 <div id="orderNumber_revise">
                     <input type="text" onkeypress="return isNumberKey(event);" placeholder="Order Number">
-                    <input type="button" value="Revise Order">
+                    <input type="button" id="reviseOrder_button" value="Revise Order">
                 </div>
 
                 <input type="button" value="Status of Order" id="orderStatus"/>
@@ -65,26 +65,7 @@
                 <input type="button" value="Order Approval" id="orderApproval"/>
             </div>
 
-            <div id="orderPanel">
-                <p style="font-size: 30pt;
-                   margin-left: auto;
-                   margin-right: auto;
-                   text-align: center;
-                   display: block;
-                   color: #FFFFFF;">Order searches go here!</p>
-
-                <div>
-
-                </div>
-
-                <div>
-
-                </div>
-
-                <div>
-
-                </div>
-            </div>
+            <iframe id="orderPanel"></iframe>
             
             <a href="placeOrder.html" id='placeOrder_link' class='fancybox fancybox.iframe'></a>
         </div>

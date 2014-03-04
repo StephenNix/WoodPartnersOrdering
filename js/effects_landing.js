@@ -25,6 +25,10 @@ $(document).ready(function() {
         $('#placeOrder_link').click();
     });
     
+    $('#reviseOrder_button').click(function() {
+        $("#orderPanel").attr('src', 'placeOrder.html');
+    });
+    
     $('#orderStatus').click(function() {
         $('#orderNumber_status input[type="number"]').val('');
         $('#orderNumber_status').stop(true, true).slideToggle(200);

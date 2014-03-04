@@ -75,6 +75,7 @@ body {
     float: right;
     margin-right: 0.7em;
     min-width: 700px;
+    height:700px;
     width: 70%;
     overflow: hidden;
     position: absolute;
