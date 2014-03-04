@@ -37,6 +37,10 @@ $(document).ready((function () {
         $('html,body').animate({scrollTop: aTag.offset().top}, 'slow');
     }
     
+    $('#Laptop').click(function () {
+        
+    });
+    
     $('.chosen-select').chosen({ width: '21%' });
     
     $('#propertyTypeSelect').ddslick({
