@@ -31,13 +31,18 @@ var currentDate = d.getFullYear() + '-' + d.getUTCMonth() + '-' + d.getDate();
 
 
 $(document).ready((function () {
-    $('body').mousedown(function(e){if(e.button===1)return false;});
-    function scrollToAnchor(aid) {
+    function scrollDownToAnchor(aid) {
         var aTag = $("a[name='" + aid + "']");
         $('html,body').animate({scrollTop: aTag.offset().top}, 'slow');
     }
     
-    $('#Laptop').click(function () {
+    $('body').mousedown(function(e){
+        if(e.button===1) {
+            return false;
+        }
+    });
+    
+    $('#laptop').click(function () {
         
     });
     
@@ -56,11 +61,16 @@ $(document).ready((function () {
     });
     
     $('#nextButton').click(function () {
-        scrollToAnchor('shippingInfo2_a'); 
+        scrollDownToAnchor('shippingInfo2_a'); 
     });
     
     $('#nextButton2').click(function () {
-        scrollToAnchor('shippingInfo3_a'); 
+        scrollDownToAnchor('shippingInfo3_a'); 
+    });
+    
+    $('#manager').click(function () {
+        $('html, body').scrollTo($('#productSelect_manager'), 800);
+        
     });
     
     $('#residentialAddress').click(function () {

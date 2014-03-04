@@ -2,7 +2,7 @@ html {
     background-color: #C8C8C8;
     font-family: 'Open Sans', sans-serif;
     min-height: 100%;
-    position: relative;
+    
 }
 
 body {
@@ -67,6 +67,15 @@ h1 {
 
 #shippingInfo3 [type=button] {
     height: 100px;
+}
+
+#productSelect_manager {
+    margin: 300px -530px 500px;
+    max-width: 800px;
+}
+
+#productSelect_manager [type=button]{
+    margin-right: 100px;
 }
 
 #address_state_chosen {
