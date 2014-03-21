@@ -28,7 +28,7 @@ var selectedProperty;
 var propertyName = "property";
 var d = new Date();
 var currentDate = d.getFullYear() + '-' + d.getUTCMonth() + '-' + d.getDate();
-
+var manager_items = [0, 0, 0, 0, 0, 0, 0];
 
 $(document).ready((function () {
     function scrollDownToAnchor(aid) {
@@ -69,8 +69,32 @@ $(document).ready((function () {
     });
     
     $('#manager').click(function () {
+        $('#productSelect_manager').css('display', 'block');
         $('html, body').scrollTo($('#productSelect_manager'), 800);
+    });
+    
+    $('#laptop').click(function () {
+        if(manager_items[0] === 0) {
+            manager_items[0] = 1;
+            $(this).animate({boxShadow: '1px 1px 12px 1px #6B6BFF'}, 100);
+        }
         
+        else {
+            manager_items[0] = 0;
+            $(this).animate({boxShadow: ''}, 100);
+        }
+    });
+    
+    $('#monitor').click(function () {
+        if(manager_items[1] === 0) {
+            manager_items[1] = 1;
+            $(this).animate({boxShadow: '1px 1px 12px 1px #6B6BFF'}, 100);
+        }
+        
+        else {
+            manager_items[1] = 0;
+            $(this).animate({boxShadow: ''}, 100);
+        }
     });
     
     $('#residentialAddress').click(function () {

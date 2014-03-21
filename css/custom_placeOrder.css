@@ -70,12 +70,9 @@ h1 {
 }
 
 #productSelect_manager {
-    margin: 300px -530px 500px;
+    margin: 0 auto 500px auto;
+    text-align: center;
     max-width: 800px;
-}
-
-#productSelect_manager [type=button]{
-    margin-right: 100px;
 }
 
 #address_state_chosen {
