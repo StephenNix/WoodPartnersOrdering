@@ -39,31 +39,32 @@
         <div id="wrapper">
             <header id="logo">
                 <img alt="logo" src="img/logo.png">
+                <div id="orderOptions">
+                    <input type="button" value="Place Order" id="placeOrder"/>
+
+                    <input type="button" value="Revise Order" id="reviseOrder"/>
+                    <div id="orderNumber_revise">
+                        <input type="text" onkeypress="return isNumberKey(event);" placeholder="Order Number">
+                        <input type="button" id="reviseOrder_button" value="Revise Order">
+                    </div>
+
+                    <input type="button" value="Status of Order" id="orderStatus"/>
+                    <div id="orderNumber_status">
+                        <input type="text" onkeypress="return isNumberKey(event);" placeholder="Order Number">
+                        <input type="button" value="Find Order">
+                    </div>
+
+                    <input type="button" value="Cancel Order" id="cancelOrder"/>
+                    <div id="orderNumber_cancel">
+                        <input type="text" onkeypress="return isNumberKey(event);" placeholder="Order Number">
+                        <input type="button" value="Cancel Order">
+                    </div>
+
+                    <input type="button" value="Order Approval" id="orderApproval"/>
+                </div>
             </header>
 
-            <div id="orderOptions">
-                <input type="button" value="Place Order" id="placeOrder"/>
-
-                <input type="button" value="Revise Order" id="reviseOrder"/>
-                <div id="orderNumber_revise">
-                    <input type="text" onkeypress="return isNumberKey(event);" placeholder="Order Number">
-                    <input type="button" id="reviseOrder_button" value="Revise Order">
-                </div>
-
-                <input type="button" value="Status of Order" id="orderStatus"/>
-                <div id="orderNumber_status">
-                    <input type="text" onkeypress="return isNumberKey(event);" placeholder="Order Number">
-                    <input type="button" value="Find Order">
-                </div>
-
-                <input type="button" value="Cancel Order" id="cancelOrder"/>
-                <div id="orderNumber_cancel">
-                    <input type="text" onkeypress="return isNumberKey(event);" placeholder="Order Number">
-                    <input type="button" value="Cancel Order">
-                </div>
-
-                <input type="button" value="Order Approval" id="orderApproval"/>
-            </div>
+            
 
             <iframe id="orderPanel"></iframe>
             

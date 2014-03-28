@@ -42,10 +42,6 @@ $(document).ready((function () {
         }
     });
     
-    $('#laptop').click(function () {
-        
-    });
-    
     $('.chosen-select').chosen({ width: '21%' });
     
     $('#propertyTypeSelect').ddslick({
@@ -73,43 +69,115 @@ $(document).ready((function () {
         $('html, body').scrollTo($('#productSelect_manager'), 800);
     });
     
-    $('#laptop').click(function () {
-        if(manager_items[0] === 0) {
-            manager_items[0] = 1;
-            $(this).animate({boxShadow: '1px 1px 12px 1px #6B6BFF'}, 100);
-        }
+    //Button Hightlighting and Selection
+    
+        //Manager Buttons
         
-        else {
-            manager_items[0] = 0;
-            $(this).animate({boxShadow: ''}, 100);
-        }
-    });
-    
-    $('#monitor').click(function () {
-        if(manager_items[1] === 0) {
-            manager_items[1] = 1;
-            $(this).animate({boxShadow: '1px 1px 12px 1px #6B6BFF'}, 100);
-        }
+            $('#laptop_manager').click(function () {
+                if(manager_items[0] === 0) {
+                    manager_items[0] = 1;
+                    $(this).animate({boxShadow: '0px 0px 10px 2px #6B6BFF'}, 100);
+                }
+
+                else {
+                    manager_items[0] = 0;
+                    $(this).animate({boxShadow: ''}, 100);
+                }
+            });
+
+            $('#monitor_manager').click(function () {
+                if(manager_items[1] === 0) {
+                    manager_items[1] = 1;
+                    $(this).animate({boxShadow: '0px 0px 10px 2px #6B6BFF'}, 100);
+                }
+
+                else {
+                    manager_items[1] = 0;
+                    $(this).animate({boxShadow: ''}, 100);
+                }
+            });
+
+            $('#dockingStation_manager').click(function () {
+                if(manager_items[2] === 0) {
+                    manager_items[2] = 1;
+                    $(this).animate({boxShadow: '0px 0px 10px 2px #6B6BFF'}, 100);
+                }
+
+                else {
+                    manager_items[2] = 0;
+                    $(this).animate({boxShadow: ''}, 100);
+                }
+            });
+
+            $('#kb_mouse_manager').click(function () {
+                if(manager_items[3] === 0) {
+                    manager_items[3] = 1;
+                    $(this).animate({boxShadow: '0px 0px 10px 2px #6B6BFF'}, 100);
+                }
+
+                else {
+                    manager_items[3] = 0;
+                    $(this).animate({boxShadow: ''}, 100);
+                }
+            });
+
+            $('#office_manager').click(function () {
+                if(manager_items[4] === 0) {
+                    manager_items[4] = 1;
+                    $(this).animate({boxShadow: '0px 0px 10px 2px #6B6BFF'}, 100);
+                }
+
+                else {
+                    manager_items[4] = 0;
+                    $(this).animate({boxShadow: ''}, 100);
+                }
+            });
+
+            $('#adobeAcrobat_manager').click(function () {
+                if(manager_items[5] === 0) {
+                    manager_items[5] = 1;
+                    $(this).animate({boxShadow: '0px 0px 10px 2px #6B6BFF'}, 100);
+                }
+
+                else {
+                    manager_items[5] = 0;
+                    $(this).animate({boxShadow: ''}, 100);
+                }
+            });
+
+            $('#emailSetup_manager').click(function () {
+                if(manager_items[6] === 0) {
+                    manager_items[6] = 1;
+                    $(this).animate({boxShadow: '0px 0px 10px 2px #6B6BFF'}, 100);
+                }
+
+                else {
+                    manager_items[6] = 0;
+                    $(this).animate({boxShadow: ''}, 100);
+                }
+            });
+            
+        //Assistant Manager Buttons
         
-        else {
-            manager_items[1] = 0;
-            $(this).animate({boxShadow: ''}, 100);
-        }
-    });
+            
     
-    $('#residentialAddress').click(function () {
-        $('#residentialAddress').attr('disabled', 'disabled');
-        $('#businessAddress').removeAttr('disabled');
-    });
+    //Residential or Business Address Selection
     
-    $('#businessAddress').click(function () {
-        $('#businessAddress').attr('disabled', 'disabled');
-        $('#residentialAddress').removeAttr('disabled');
-    });
+        $('#residentialAddress').click(function () {
+            $('#residentialAddress').attr('disabled', 'disabled');
+            $('#businessAddress').removeAttr('disabled');
+        });
+
+        $('#businessAddress').click(function () {
+            $('#businessAddress').attr('disabled', 'disabled');
+            $('#residentialAddress').removeAttr('disabled');
+        });
     
-    $('#propertyName').bind('input propertychange', function() {
-        propertyName = $('#propertyName').val();
-        $('#POnumber').val(selectedProperty + '_' + propertyName + '_' + currentDate);
-        $('#POnumber').val($('#POnumber').val().split(" ").join(""));
-    });
+    //Dynamic Purchase Order Generation
+    
+        $('#propertyName').bind('input propertychange', function() {
+            propertyName = $('#propertyName').val();
+            $('#POnumber').val(selectedProperty + '_' + propertyName + '_' + currentDate);
+            $('#POnumber').val($('#POnumber').val().split(" ").join(""));
+        });
 }));
