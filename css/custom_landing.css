@@ -1,5 +1,5 @@
 html {
-    background-image: url("../img/green_cup.png");
+    background-color: #AAAAAA;
     font-family: 'Open Sans', sans-serif;
     min-height: 100%;
     position: relative;
@@ -48,8 +48,8 @@ body {
 
 #orderNumber_status, #orderNumber_revise, #orderNumber_cancel {
     display: none;
-    margin-bottom: 0.7em;
-    width: 75.5%;
+    width: 25%;
+    margin: 0 auto;
 }
 
 #orderNumber_status > input[type="number"], 
@@ -66,7 +66,7 @@ body {
 }
 
 #orderPanel {
-    border: 3px dotted #FFFFFF;
+    border: 0px;
     min-width: 700px;
     height:700px;
     width: 100%;
